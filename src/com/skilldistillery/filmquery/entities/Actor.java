@@ -8,11 +8,6 @@ public class Actor {
 	private String firstName;
 	private String lastName;
 	private List<Film> films;
-
-	public Actor() {
-		super();
-	}
-
 	public Actor(int id, String firstName, String lastName, List<Film> films) {
 		super();
 		this.id = id;
@@ -20,44 +15,43 @@ public class Actor {
 		this.lastName = lastName;
 		this.films = films;
 	}
-
-	public int getId() {
-		return id;
-	}
-
-	public void setId(int id) {
-		this.id = id;
-	}
-
-	public String getFirstName() {
-		return firstName;
-	}
-
-	public void setFirstName(String firstName) {
-		this.firstName = firstName;
-	}
-
-	public String getLastName() {
-		return lastName;
-	}
-
-	public void setLastName(String lastName) {
-		this.lastName = lastName;
-	}
-
 	public List<Film> getFilms() {
 		return films;
 	}
-
 	public void setFilms(List<Film> films) {
 		this.films = films;
 	}
-
+	public Actor() {
+		super();
+	}
+	public Actor(int id, String firstName, String lastName) {
+		super();
+		this.id = id;
+		this.firstName = firstName;
+		this.lastName = lastName;
+	}
+	public int getId() {
+		return id;
+	}
+	public void setId(int id) {
+		this.id = id;
+	}
+	public String getFirstName() {
+		return firstName;
+	}
+	public void setFirstName(String firstName) {
+		this.firstName = firstName;
+	}
+	public String getLastName() {
+		return lastName;
+	}
+	public void setLastName(String lastName) {
+		this.lastName = lastName;
+	}
 	@Override
 	public int hashCode() {
 		return Objects.hash(films, firstName, id, lastName);
 	}
-
 	@Override
 	public boolean equals(Object obj) {
 		if (this == obj)
@@ -70,9 +64,10 @@ public class Actor {
 		return Objects.equals(films, other.films) && Objects.equals(firstName, other.firstName) && id == other.id
 				&& Objects.equals(lastName, other.lastName);
 	}
-
 	@Override
 	public String toString() {
 		return "Actor [id=" + id + ", firstName=" + firstName + ", lastName=" + lastName + ", films=" + films + "]";
 	}
+	
+
 }
